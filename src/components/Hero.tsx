@@ -1,73 +1,70 @@
 import React from 'react';
 import { MercadoLibreCTA } from './MercadoLibreCTA';
+import { FadeIn } from './FadeIn';
+import { InteractivePressMobile } from './InteractivePressMobile';
 
 export const Hero: React.FC = () => {
   return (
-    <header className="relative bg-gradient-to-b from-slate-950 via-slate-900 to-slate-900 text-white pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 bg-[#090A0F] text-slate-100 overflow-hidden">
+      
+      {/* Luz ambiental de fondo en rojo carmesí */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-red-600/15 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
         
-        {/* Columna Izquierda: Copywriting enfocado en la conversión */}
-        <div className="lg:col-span-7 text-center lg:text-left space-y-6">
-          
-          {/* Badge o Etiqueta superior */}
-          <span className="inline-block bg-amber-500/10 text-amber-400 border border-amber-500/30 text-xs sm:text-sm font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
-            GLEz Cocina y Acero
-          </span>
-          <img
-            src="./assets/prensa.webp"
-            alt="Prensa para tortillas de harina de acero GLEz"
-            width="600"
-            height="400"
-            className="w-full h-auto object-cover rounded-xl"
-            loading="eager"
-         />
-
-          {/* Titular Principal (H1) */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-            Prensas para tortillas de harina de{' '}
-            <span className="text-amber-400">grado profesional</span>
-          </h1>
-
-          {/* Subtítulo descriptivo */}
-          <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0">
-            Obtén tortillas delgadas, parejas y perfectas en minutos. Fabricadas en
-            acero de alta resistencia para el hogar o tu negocio.
-          </p>
-
-          {/* Llamado a la Acción (CTA) */}
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-            <MercadoLibreCTA
-              href="https://articulo.mercadolibre.com.mx/TU-LINK-AQUI"
-              text="Comprar ahora en Mercado Libre"
-            />
-          </div>
-
-          {/* Sellos de Confianza (Reduce la fricción de compra) */}
-          <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs sm:text-sm text-slate-400">
-            <div className="flex items-center gap-2">
-              <span className="text-emerald-400 font-bold">✓</span> Envío Gratis a todo México
+        {/* LADO IZQUIERDO: TEXTO E IDENTIDAD */}
+        <FadeIn direction="up">
+          <div className="text-center lg:text-left">
+            
+            {/* Insignia / Badge de identidad */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-950/50 border border-red-800/60 text-red-400 text-xs font-semibold tracking-wider uppercase mb-5 shadow-inner">
+              <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+              Ingeniería en Acero Inoxidable
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-emerald-400 font-bold">✓</span> Compra Protegida
-            </div>
-          </div>
-        </div>
 
-        {/* Columna Derecha: Imagen destacada del producto */}
-        <div className="lg:col-span-5 flex justify-center">
-          <div className="relative w-full max-w-md lg:max-w-none">
-            <div className="relative rounded-2xl overflow-hidden bg-slate-800 border border-slate-700 p-2 shadow-2xl">
-              <img
-                src="/images/prensa-hero.webp"
-                alt="Prensa para tortillas de harina de acero marca GLEz"
-                className="w-full h-auto object-cover rounded-xl"
-                loading="eager" // Fuerza la carga prioritaria de la primera imagen
+            {/* Título Principal */}
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-none uppercase">
+              Potencia y precisión en <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-600 to-amber-500">
+                Cada Prensado
+              </span>
+            </h1>
+
+            {/* Subtítulo / Descripción corta */}
+            <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-slate-400 max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+              Prensas industriales y comerciales diseñadas para alto rendimiento. Fabricadas en acero de alta resistencia con acabado pulido.
+            </p>
+
+            {/* Botón CTA principal para Desktop/Tablet */}
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <MercadoLibreCTA
+                href="https://articulo.mercadolibre.com.mx/TU-LINK-AQUI"
+                text="Comprar en Mercado Libre"
+                className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-red-600/30 transition-all duration-300 transform active:scale-95"
               />
             </div>
+            
+            {/* Puntos de confianza / Beneficios rápidos */}
+            <div className="mt-8 pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-400">
+              <div className="flex items-center gap-2">
+                <span className="text-red-500 font-bold">✓</span> Envío Gratis a todo México
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-red-500 font-bold">✓</span> Acero Grado Alimenticio
+              </div>
+            </div>
+
           </div>
-        </div>
+        </FadeIn>
+
+        {/* LADO DERECHO: INTERACCION CON LA PRENSA (SIN TARJETA NI CONTENEDORES RAROS) */}
+        <FadeIn direction="up" delay={0.15}>
+          <div className="relative flex justify-center items-center w-full">
+            <InteractivePressMobile />
+          </div>
+        </FadeIn>
 
       </div>
-    </header>
+    </section>
   );
 };

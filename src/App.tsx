@@ -2,16 +2,25 @@ import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Benefits } from './components/Benefits';
+import { StickyMobileCTA } from './components/StickyMobileCTA';
 
 export const App: React.FC = () => {
   return (
-    // Contenedor principal con fondo oscuro persistente y tipografía fluida
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased">
+    <div className="min-h-screen bg-[#090A0F] text-slate-100 font-sans antialiased w-full pb-20 lg:pb-0">
+      {/* 1. Barra de navegación superior fija */}
       <Navbar />
-      <main>
+
+      {/* 2. Contenido principal */}
+      <main className="w-full">
         <Hero />
         <Benefits />
       </main>
+
+      {/* 3. Botón flotante inferior exclusivo para Celulares */}
+      
+      <StickyMobileCTA mercadoLibreUrl="https://www.mercadolibre.com.ar" />
+
+      
     </div>
   );
 };

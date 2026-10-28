@@ -3,33 +3,39 @@ import { MercadoLibreCTA } from './MercadoLibreCTA';
 
 export const Navbar: React.FC = () => {
   return (
-    <nav className="absolute top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80 px-4 sm:px-6 lg:px-8 py-3.5">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    // 1. HEADER/NAVBAR: Con fondo oscuro sólido (slate-950), sombra y borde inferior
+    <header className="fixed top-0 left-0 w-full z-50 bg-slate-950 border-b border-slate-800 shadow-lg px-4 sm:px-8 py-3">
+      <div className="max-w-7xl mx-auto w-full flex flex-row items-center justify-between">
         
-        {/* Lado Izquierdo: Logo de GLEz */}
+        {/* Lado Izquierdo: Contenedor del Logo */}
         <a 
           href="#" 
-          className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg"
+          className="flex items-center gap-3 shrink-0 focus:outline-none"
           aria-label="Inicio - GLEz cocina y acero"
         >
+          {/* 
+            AQUÍ CAMBIAS EL TAMAÑO DEL LOGO:
+            - h-8 (32px), h-12 (48px), h-16 (64px), h-20 (80px), etc.
+            - w-auto mantiene la proporción original sin deformarlo.
+          */}
           <img
             src="/images/logoglez.webp"
             alt="Logo de GLEz cocina y acero"
-            className="h-9 w-auto sm:h-11 object-contain transition-transform duration-300 group-hover:scale-105"
+            className="h-12 w-auto object-contain block" // <--- Modifica 'h-12' si lo quieres más grande (ej: h-16) o más pequeño (ej: h-10)
             loading="eager"
           />
         </a>
 
         {/* Lado Derecho: Botón de Mercado Libre */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center shrink-0">
           <MercadoLibreCTA
             href="https://articulo.mercadolibre.com.mx/TU-LINK-AQUI"
             text="Ir a Mercado Libre"
-            className="text-xs sm:text-sm px-3.5 py-2 sm:px-5 sm:py-2.5"
+            className="text-xs sm:text-sm px-4 py-2"
           />
         </div>
 
       </div>
-    </nav>
+    </header>
   );
 };
