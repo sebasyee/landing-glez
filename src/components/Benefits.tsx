@@ -11,7 +11,7 @@ const benefitsData: BenefitItem[] = [
   {
     title: 'Acero de Alta Durabilidad',
     description:
-      'Estructura reinforced que soporta la presión diaria sin deformarse ni descalibrarse.',
+      'Estructura reforzada que soporta la presión diaria sin deformarse ni descalibrarse.',
     icon: '🛡️',
   },
   {
@@ -36,14 +36,14 @@ const benefitsData: BenefitItem[] = [
 
 export const Benefits: React.FC = () => {
   return (
-    <section className="py-20 bg-slate-900 text-white px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-brand-canvas text-brand-ink px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        
+
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-2xl sm:text-4xl font-bold">
-            ¿Por qué elegir las prensas de <span className="text-amber-400">GLEz</span>?
+            ¿Por qué elegir las prensas de <span className="text-brand-red">GLEz</span>?
           </h2>
-          <p className="mt-4 text-slate-400">
+          <p className="mt-4 text-brand-ink/70">
             Diseño robusto en acero creado para facilitar la preparación de tortillas de harina.
           </p>
         </div>
@@ -53,13 +53,13 @@ export const Benefits: React.FC = () => {
           {benefitsData.map((benefit, index) => (
             <div
               key={index} // Identificador único para el ciclo de renderizado de React
-              className="bg-slate-800/50 border border-slate-700/60 rounded-xl p-6 transition-all duration-300 hover:border-amber-500/50"
+              className="bg-brand-card border border-brand-ink/10 rounded-xl p-6 transition-all duration-300 hover:border-brand-red/50"
             >
               <div className="text-4xl mb-4">{benefit.icon}</div>
-              <h3 className="text-xl font-semibold text-white mb-2">
+              <h3 className="text-xl font-semibold text-brand-ink mb-2">
                 {benefit.title}
               </h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <p className="text-brand-ink/70 text-sm leading-relaxed">
                 {benefit.description}
               </p>
             </div>

@@ -31,13 +31,13 @@ export const StickyMobileCTA: React.FC<StickyMobileCTAProps> = ({ mercadoLibreUr
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed bottom-0 left-0 right-0 p-4 bg-glezDark/90 backdrop-blur-md border-t border-slate-800 z-50 md:hidden"
+          className="fixed bottom-0 left-0 right-0 p-4 bg-brand-canvas/90 backdrop-blur-md border-t border-brand-card z-50 md:hidden"
         >
           <a
             href={mercadoLibreUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-3.5 px-6 bg-glezRed hover:bg-red-700 text-white font-bold text-center text-sm rounded-xl flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(230,29,43,0.4)] active:scale-[0.98] transition-all"
+            className="w-full py-3.5 px-6 bg-brand-red hover:bg-brand-red/90 text-white font-bold text-center text-sm rounded-xl flex items-center justify-center gap-2 shadow-[0_0_20px_#DC262666] active:scale-[0.98] transition-all"
           >
             <span>Ver Oferta en Mercado Libre</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

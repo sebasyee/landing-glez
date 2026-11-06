@@ -6,7 +6,7 @@ import { StickyMobileCTA } from './components/StickyMobileCTA';
 
 export const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#090A0F] text-slate-100 font-sans antialiased w-full pb-20 lg:pb-0">
+    <div className="min-h-screen bg-brand-canvas text-brand-ink font-sans antialiased w-full pb-20 lg:pb-0">
       {/* 1. Barra de navegación superior fija */}
       <Navbar />
 
