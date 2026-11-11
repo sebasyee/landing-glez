@@ -21,7 +21,7 @@ export const Navbar: React.FC = () => {
           <img
             src="/images/logoglez.webp"
             alt="Logo de GLEz cocina y acero"
-            className="h-12 w-auto object-contain block" // <--- Modifica 'h-12' si lo quieres más grande (ej: h-16) o más pequeño (ej: h-10)
+            className="h-16 w-auto object-contain block" // <--- Modifica 'h-12' si lo quieres más grande (ej: h-16) o más pequeño (ej: h-10)
             loading="eager"
           />
         </a>

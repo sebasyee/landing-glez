@@ -11,6 +11,10 @@ export default {
           card: '#F1F5F9',    // tarjetas y otros usos
           accent: '#F59E0B',  // badges, alertas, destacados
         },
+        meli: {
+          yellow: '#FFE600', // amarillo de la marca
+          blue: '#2D3277',   // azul para el texto sobre amarillo
+        },
       },
     },
   },
