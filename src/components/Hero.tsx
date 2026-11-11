@@ -55,12 +55,6 @@ export const Hero: React.FC = () => {
           </div>
         </FadeIn>
 
-        <FadeIn direction="up" delay={0.15}>
-          <div className="relative flex justify-center items-center w-full">
-            <InteractivePressMobile />
-          </div>
-        </FadeIn>
-
       </div>
     </section>
   );
