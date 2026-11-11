@@ -13,7 +13,6 @@ export const App: React.FC = () => {
       {/* 2. Contenido principal */}
       <main className="w-full">
         <Hero />
-        <Benefits />
       </main>
 
       {/* 3. Botón flotante inferior exclusivo para Celulares */}

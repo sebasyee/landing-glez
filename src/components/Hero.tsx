@@ -1,7 +1,6 @@
 import React from 'react';
 import { MercadoLibreCTA } from './MercadoLibreCTA';
 import { FadeIn } from './FadeIn';
-import { InteractivePressMobile } from './InteractivePressMobile';
 
 export const Hero: React.FC = () => {
   return (
@@ -15,23 +14,14 @@ export const Hero: React.FC = () => {
         <FadeIn direction="up">
           <div className="text-center lg:text-left">
 
-            {/* Badge: fondo ámbar suave, texto oscuro para legibilidad */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-accent/20 border border-brand-accent text-brand-ink text-xs font-semibold tracking-wider uppercase mb-5">
-              <span className="w-2 h-2 rounded-full bg-brand-red animate-pulse" />
-              Ingeniería en Acero Inoxidable
-            </div>
-
             {/* Titular: el rojo sólido se lee mejor que un degradado sobre fondo claro */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-brand-ink tracking-tight leading-none uppercase">
-              Potencia y precisión en <br />
+              Prensa para tortillas de harina<br />
               <span className="text-brand-red">
-                Cada Prensado
+                comprar en línea
               </span>
             </h1>
 
-            <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-brand-ink/70 max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
-              Prensas industriales y comerciales diseñadas para alto rendimiento. Fabricadas en acero de alta resistencia con acabado pulido.
-            </p>
 
             {/* CTA: el color lo decide la variante; aquí solo ajustamos layout */}
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
@@ -58,4 +48,4 @@ export const Hero: React.FC = () => {
       </div>
     </section>
   );
-};
+}
